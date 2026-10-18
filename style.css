@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navigation bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    color: #e23744;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #e23744;
+}
+
+/* Hero section with background image */
+.hero {
+    min-height: 480px;
+    padding: 70px 20px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 65px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(850px, 95%);
+    padding: 12px;
+    border-radius: 10px;
+    background: white;
+    color: #555;
+}
+
+.search-box input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px 5px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #e23744;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #c82333;
+}
+
+.divider {
+    color: #ccc;
+}
+
+#message {
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+/* Feature cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 45px 7%;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 230px;
+    max-width: 350px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.food-image {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff0f0;
+    font-size: 55px;
+}
+
+.card h3 {
+    padding: 15px 15px 5px;
+}
+
+.card p {
+    padding: 5px 15px 20px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #f8f8f8;
+    color: #777;
+}
+
+/* Mobile responsive design */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .search-box {
+        flex-wrap: wrap;
+    }
+
+    .search-box input {
+        flex-basis: 65%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+}
